@@ -8,13 +8,23 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.css'
 })
 export class App {
-  // Metodo per restituire il nome 
+  protected readonly title = signal('nome');
+  
+
   public showName() {
     return 'john';
   }
-
-  // Metodo per restituire il cognome 
+  
   public showSurn() {
     return 'smit';
   }
+  public saluta(): void {
+    alert('Ciao utente!');
+  }
+
+  public arrivederci(): void {
+    alert('Arrivederci!');
+
+    }
 }
+

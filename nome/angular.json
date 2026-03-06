@@ -31,7 +31,9 @@
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
-              "allowedHosts": []
+              "allowedHosts": [
+                "reimagined-tribble-g464pw4rpwrr29jq7-4200.app.github.dev"
+              ]
             },
             "ssr": {
               "entry": "src/server.ts"
@@ -63,6 +65,13 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "host": "0.0.0.0",
+            "port": 4200,
+            "allowedHosts": [
+              "reimagined-tribble-g464pw4rpwrr29jq7-4200.app.github.dev"
+            ]
+          },
           "configurations": {
             "production": {
               "buildTarget": "nome:build:production"
